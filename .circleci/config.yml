@@ -26,16 +26,16 @@ jobs:
             - "npm-packs"
       - run:  npm i
       - run: npm run test
-    analyze:
-      docker:
-        - image:  circleci/node:13.8.0
-      steps:
-        - checkout
-        - restore_cache:
-            keys:
-              - "npm-packs"
-        - run:  npm i
-        - run: npm audit
+  analyze:
+    docker:
+      - image:  circleci/node:13.8.0
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - "npm-packs"
+      - run:  npm i
+      - run: npm audit
 
 workflows:
   build_wf:
