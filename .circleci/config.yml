@@ -34,7 +34,6 @@ jobs:
       - restore_cache:
           keys:
             - "npm-packs"
-      - run:  npm i
       - run: npm audit
 
 workflows:
