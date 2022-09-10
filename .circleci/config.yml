@@ -23,7 +23,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - "nom-packs"
+            - "npm-packs"
       - run:  npm i
       - run: npm run test
     analyze:
@@ -33,7 +33,7 @@ jobs:
         - checkout
         - restore_cache:
             keys:
-              - "nom-packs"
+              - "npm-packs"
         - run:  npm i
         - run: npm audit
 
